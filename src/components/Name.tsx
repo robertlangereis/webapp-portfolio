@@ -1,15 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
+// @ts-ignore
+import useStyles from './Name.styles.tsx'
 
-function Name() {
+export const Name: React.FC = () => {
+	const classes = useStyles()
+	const [aboutActive, setAboutActive] = useState(false)
 	return (
-		<div className=''>
-			<div className='flex mx-auto w-screen h-screen my-0 p-5 block'>
-				<h1 className='flex w-full justify-center items-center font-bold text-3xl'>
-					Robert Langereis
+		<div className='bg-primary-black flex mx-auto w-screen h-screen my-0 p-5'>
+			<button
+				className='bg-white flex w-1/6 rounded-full h-10'
+				onClick={() => setAboutActive(!aboutActive)}
+			>
+				CLICK
+			</button>
+			<div className='flex w-full h-full justify-center  items-center'>
+				<h1
+					className={`${classes.nameElement} flex flex-col items-center font-bold text-3xl`}
+				>
+					<span
+						className={`${
+							aboutActive ? classes.aboutElements : classes.about
+						} mr-7`}
+					>
+						about
+					</span>
+					<span
+						className={`${
+							aboutActive ? classes.aboutElements : classes.spanElement
+						} pb-2`}
+					>
+						Robert
+					</span>
+					<span
+						className={`${
+							aboutActive ? classes.langereisElement : classes.spanElement
+						} pt-2`}
+					>
+						Langereis
+					</span>
 				</h1>
 			</div>
 		</div>
 	)
 }
-
-export default Name

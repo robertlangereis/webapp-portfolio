@@ -1,4 +1,4 @@
-const BODY_FONT_FAMILY = ['Roboto', 'Orgon', 'sans-serif'];
+const BODY_FONT_FAMILY = ['Roboto', 'Orgon', 'sans-serif']
 
 module.exports = {
 	content: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -14,7 +14,86 @@ module.exports = {
 			body: BODY_FONT_FAMILY,
 			titles: ['Orgon', 'Roboto', 'sans-serif'],
 		},
+		colors: {
+			black: '#2B2E31',
+			error: {
+				darkest: '#660000',
+				dark: '#B20000',
+				default: '#FF0000',
+				light: '#FF4C4D',
+				lighter: '#FFAAAA',
+				lightest: '#FFE5E5',
+			},
+			info: {
+				darkest: '#234B5C',
+				dark: '#296681',
+				default: '#5EBFEA',
+				light: '#99D9F5',
+				lightest: '#E5F7FF',
+			},
+			primary: {
+				black: '#000',
+				darkest: '#0C315A',
+				dark: '#1862B5',
+				default: '#1E7BE2',
+				light: '#8EBCF1',
+				lighter: '#C2D8F2',
+				lightest: '#E8F2FC',
+			},
+			secondary: {
+				darkest: '#002A37',
+				dark: '#00546E',
+				default: '#006989',
+				light: '#B3D2DC',
+				lightest: '#E6F0F3',
+			},
+			shade: {
+				darkest: '#3D4348',
+				dark: '#6E757D',
+				default: '#A7ACB1',
+				light: '#D6D9DC',
+				lightest: '#F5F6F7',
+			},
+			success: {
+				darkest: '#2B4A1C',
+				dark: '#4C8231',
+				default: '#6CB946',
+				light: '#98CE7E',
+				lightest: '#ECFCE8',
+			},
+			tertiary: {
+				darkest: '#560724',
+				dark: '#970C3E',
+				default: '#D81159',
+				light: '#EC88AC',
+				lightest: '#FBE7EE',
+			},
+			warning: {
+				darkest: '#664F00',
+				dark: '#B28600',
+				default: '#FFBF00',
+				light: '#FFD24C',
+				lightest: '#FFF4CE',
+			},
+			white: '#FFFFFF',
+			transparent: 'transparent',
+			background: {
+				light: '#F2F6FA',
+				lightest: '#FAFBFD',
+				grey: '#E6E6E6',
+			},
+		},
 		extend: {
+			width: () => ({
+				'1/6': '16.667%',
+				'1/4': '25%',
+				'1/3': '33.333%',
+				'1/2': '50%',
+				'2/3': '66.667%',
+				'4/5': '80%',
+				90: '90%',
+				indicator: '10px',
+			}),
 			fontFamily: {
 				sans: [
 					'"Inter"',
