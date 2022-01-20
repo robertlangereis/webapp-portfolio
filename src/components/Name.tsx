@@ -8,7 +8,7 @@ export const Name: React.FC = () => {
 	return (
 		<div className='bg-primary-black flex mx-auto w-screen h-screen my-0 p-5'>
 			<button
-				className='bg-white flex w-1/6 rounded-full h-10'
+				className='bg-white relative top-0 left-1/2 w-1/12 rounded-full h-10'
 				onClick={() => setAboutActive(!aboutActive)}
 			>
 				CLICK
