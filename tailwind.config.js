@@ -95,6 +95,7 @@ module.exports = {
 				indicator: '10px',
 			}),
 			fontFamily: {
+				mono: ["monospace"],
 				sans: [
 					'"Inter"',
 					'system-ui',

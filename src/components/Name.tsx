@@ -64,8 +64,7 @@ export const Name: React.FC = () => {
 				break
 			case '<':
 				if (codeActive) classNames.push(classes.fadeIn, classes.aboutElements)
-				if (skillsActive)
-					classNames.push(classes.hideInstant)
+				if (skillsActive) classNames.push(classes.hideInstant)
 				else classNames.push(classes.hide)
 				break
 			case '/>':
@@ -94,12 +93,17 @@ export const Name: React.FC = () => {
 				Contact
 			</button>
 
-			<button
-				className='bg-white absolute bottom-0 w-1/12 mx-auto left-0 right-0 rounded-full h-10'
+			<h2
+				className={`${skillsActive &&
+					classes.hide} arrow-down text-opacity-50 from-shade-darkest transition ease-in-out absolute text-primary-lightest bottom-20 cursor-pointer text-5xl w-max text-center mx-auto left-0 right-0 h-10 font-extrabold font-mono`}
 				onClick={() => setSkillsActive(!skillsActive)}
 			>
-				Skills
-			</button>
+				skills
+				<span></span>
+				<span></span>
+				<span></span>
+			</h2>
+			<div className='absolute bottom-0 left-0 right-0'></div>
 			<button
 				className='bg-white absolute top-0 bottom-0 my-auto w-1/12 left-0 rounded-full h-10'
 				onClick={() => setCodeActive(!codeActive)}
