@@ -3,11 +3,12 @@ import React, { useState } from 'react'
 import { classSelector } from './ClassSelector.ts'
 // @ts-ignore
 import useStyles from './Name.styles.tsx'
+import { PropsClasses } from './Name.types';
 // @ts-ignore
 import { Quote } from './Quote.tsx'
 
 export const Name: React.FC = () => {
-	const classes = useStyles()
+	const classes: PropsClasses = useStyles()
 	const [inputActive, setInputActive] = useState('')
 	return (
 		<div className='bg-primary-black flex mx-auto w-screen h-screen my-0'>
@@ -15,7 +16,7 @@ export const Name: React.FC = () => {
 				className={`${(inputActive === 'codeActive' ||
 					inputActive === 'contactActive' ||
 					inputActive === 'skillsActive') &&
-					classes.hide} typewriter text-opacity-50 from-shade-darkest transition ease-in-out absolute text-primary-lightest top-20 cursor-pointer text-4xl w-max text-center top-0 mx-auto left-0 right-0 h-10 font-extrabold font-mono`}
+					classes.hide} typewriter text-opacity-50 from-shade-darkest transition ease-in-out absolute text-primary-lightest top-20 cursor-pointer text-4xl w-max text-center mx-auto left-0 right-0 h-10 font-extrabold font-mono`}
 				onClick={() => setInputActive('aboutActive')}
 			>
 				About

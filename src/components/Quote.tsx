@@ -8,17 +8,17 @@ export const Quote: React.FC<QuoteProps> = ({ inputActive }) => {
 	let quoteBlock
 	switch (inputActive) {
 		case 'codeActive':
-			quoteBlock = 'the process or activity of writing computer programs'
+			quoteBlock = '"the process or activity of writing computer programs"'
 			break
 		case 'skillsActive':
-			quoteBlock = 'the ability to do something well; expertise'
+			quoteBlock = '"the ability to do something well; expertise"'
 			break
 		case 'aboutActive':
-			quoteBlock = 'on the subject of; concerning'
+			quoteBlock = '"on the subject of; concerning"'
 			break
 		case 'contactActive':
 			quoteBlock =
-				'communicate with someone, typically in order to give or receive information'
+				'"communicate with someone, typically in order to give or receive information"'
 			break
 		default:
 			break
